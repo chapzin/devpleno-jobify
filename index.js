@@ -9,7 +9,7 @@ const port = process.env.PORT || 3001
 
 app.set('views', path.resolve(__dirname, 'views'))
 app.set('view engine', 'ejs')
-app.use(express.static('public'))
+app.use(express.static(path.resolve(__dirname, 'public')))
 app.use(bodyParser.urlencoded({ extended: false }))
 
 app.get('/', async (req, res) => {
