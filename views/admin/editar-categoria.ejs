@@ -1,0 +1,15 @@
+<%- include('header') %>
+<h2>
+  Admin Vagas:
+  <a href="/admin/categorias">Categorias</a>
+</h2>
+<div>
+  <form method="POST">
+    <label>Categoria</label>
+    <input type="text" name="categoria" value="<%= categoria.categoria %>" />
+    <br />
+
+    <button>Salvar</button>
+  </form>
+</div>
+<%- include('footer') %>
