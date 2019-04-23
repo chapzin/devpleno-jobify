@@ -7,6 +7,7 @@ const sqlite = require('sqlite')
 const dbConnection = sqlite.open(path.resolve(__dirname, 'banco.sqlite'), { Promise })
 const port = process.env.PORT || 3001
 
+app.set('views', path.resolve(__dirname, 'views'))
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: false }))
